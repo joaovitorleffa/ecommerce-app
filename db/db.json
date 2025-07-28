@@ -1,0 +1,496 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "description": "High-quality over-ear headphones with active noise cancellation and 20-hour battery life.",
+      "price": 89.99,
+      "category": "Electronics",
+      "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "stock": 50,
+      "rating": 4.5,
+      "reviews": [
+        { "user": "Alex", "comment": "Great sound quality!", "rating": 5 },
+        {
+          "user": "Sam",
+          "comment": "Comfortable but battery could last longer.",
+          "rating": 4
+        }
+      ],
+      "specifications": {
+        "weight": "250g",
+        "battery": "20 hours",
+        "connectivity": "Bluetooth 5.0"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Smartphone Case",
+      "description": "Durable silicone case with shockproof design for smartphones.",
+      "price": 19.99,
+      "category": "Accessories",
+      "imageUrl": "https://images.unsplash.com/photo-1611446638249-7f76b962e951",
+      "stock": 100,
+      "rating": 4.2,
+      "reviews": [
+        { "user": "Mia", "comment": "Fits perfectly!", "rating": 4 },
+        { "user": "Jake", "comment": "Good but slightly bulky.", "rating": 3 }
+      ],
+      "specifications": {
+        "material": "Silicone",
+        "compatibility": "iPhone 13/14, Samsung Galaxy S22",
+        "features": "Shockproof, Anti-slip"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Running Shoes",
+      "description": "Lightweight running shoes with breathable mesh and cushioned soles.",
+      "price": 59.99,
+      "category": "Footwear",
+      "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+      "stock": 30,
+      "rating": 4.7,
+      "reviews": [
+        {
+          "user": "Emma",
+          "comment": "Super comfortable for long runs.",
+          "rating": 5
+        },
+        { "user": "Liam", "comment": "Great grip!", "rating": 4 }
+      ],
+      "specifications": {
+        "sizes": "US 7-11",
+        "material": "Mesh, Rubber",
+        "features": "Breathable, Cushioned"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Laptop Backpack",
+      "description": "Water-resistant backpack with padded laptop compartment for up to 15-inch laptops.",
+      "price": 39.99,
+      "category": "Bags",
+      "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+      "stock": 25,
+      "rating": 4.3,
+      "reviews": [
+        { "user": "Noah", "comment": "Spacious and durable.", "rating": 5 },
+        {
+          "user": "Ava",
+          "comment": "Zipper quality could be better.",
+          "rating": 3
+        }
+      ],
+      "specifications": {
+        "capacity": "20L",
+        "material": "Polyester",
+        "features": "Water-resistant, Laptop sleeve"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Smart Watch",
+      "description": "Fitness tracker with heart rate monitor, GPS, and water resistance.",
+      "price": 129.99,
+      "category": "Electronics",
+      "imageUrl": "https://images.unsplash.com/photo-1546868871-7041f2a55e12",
+      "stock": 40,
+      "rating": 4.6,
+      "reviews": [
+        {
+          "user": "Olivia",
+          "comment": "Love the fitness tracking features!",
+          "rating": 5
+        },
+        { "user": "Ethan", "comment": "Screen is a bit small.", "rating": 4 }
+      ],
+      "specifications": {
+        "display": "1.4-inch AMOLED",
+        "battery": "7 days",
+        "features": "Heart rate, GPS, Waterproof"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Sunglasses",
+      "description": "Polarized sunglasses with UV400 protection and stylish design.",
+      "price": 29.99,
+      "category": "Accessories",
+      "imageUrl": "https://images.unsplash.com/photo-1511499767150-a48a237f0083",
+      "stock": 60,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "Sophia",
+          "comment": "Look great and feel sturdy.",
+          "rating": 5
+        },
+        { "user": "Mason", "comment": "Lens scratches easily.", "rating": 3 }
+      ],
+      "specifications": {
+        "lens": "Polarized",
+        "protection": "UV400",
+        "frame": "Acetate"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Coffee Maker",
+      "description": "Automatic drip coffee maker with 12-cup capacity and programmable timer.",
+      "price": 49.99,
+      "category": "Appliances",
+      "imageUrl": "https://images.unsplash.com/photo-1526930294511-4c7e6f45e3b7",
+      "stock": 20,
+      "rating": 4.1,
+      "reviews": [
+        { "user": "Isabella", "comment": "Makes great coffee!", "rating": 4 },
+        { "user": "James", "comment": "A bit noisy.", "rating": 3 }
+      ],
+      "specifications": {
+        "capacity": "12 cups",
+        "features": "Programmable, Auto shut-off",
+        "material": "Stainless Steel"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Yoga Mat",
+      "description": "Non-slip yoga mat with carrying strap, ideal for yoga and pilates.",
+      "price": 24.99,
+      "category": "Fitness",
+      "imageUrl": "https://images.unsplash.com/photo-1601924994987-8b363a83e2b9",
+      "stock": 45,
+      "rating": 4.8,
+      "reviews": [
+        { "user": "Charlotte", "comment": "Perfect thickness!", "rating": 5 },
+        { "user": "Lucas", "comment": "Great grip.", "rating": 4 }
+      ],
+      "specifications": {
+        "thickness": "6mm",
+        "material": "PVC",
+        "features": "Non-slip, Carry strap"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Bluetooth Speaker",
+      "description": "Portable speaker with 10-hour battery life and waterproof design.",
+      "price": 69.99,
+      "category": "Electronics",
+      "imageUrl": "https://images.unsplash.com/photo-1542181968-4c0ca610d2b1",
+      "stock": 35,
+      "rating": 4.5,
+      "reviews": [
+        {
+          "user": "Amelia",
+          "comment": "Amazing sound for the size!",
+          "rating": 5
+        },
+        { "user": "Elijah", "comment": "Battery life is decent.", "rating": 4 }
+      ],
+      "specifications": {
+        "battery": "10 hours",
+        "features": "Waterproof, Bluetooth 5.0",
+        "weight": "500g"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Leather Wallet",
+      "description": "Slim leather wallet with RFID protection and multiple card slots.",
+      "price": 34.99,
+      "category": "Accessories",
+      "imageUrl": "https://images.unsplash.com/photo-1615333258460-69e3460d96e2",
+      "stock": 70,
+      "rating": 4.3,
+      "reviews": [
+        { "user": "Harper", "comment": "Sleek and functional.", "rating": 5 },
+        {
+          "user": "Logan",
+          "comment": "Stitching could be better.",
+          "rating": 3
+        }
+      ],
+      "specifications": {
+        "material": "Genuine Leather",
+        "features": "RFID Blocking, 6 card slots",
+        "dimensions": "11x8cm"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Hiking Boots",
+      "description": "Waterproof hiking boots with excellent traction for outdoor adventures.",
+      "price": 79.99,
+      "category": "Footwear",
+      "imageUrl": "https://images.unsplash.com/photo-1520639872749-d2c1b0f54b75",
+      "stock": 15,
+      "rating": 4.6,
+      "reviews": [
+        {
+          "user": "Avery",
+          "comment": "Perfect for tough trails!",
+          "rating": 5
+        },
+        { "user": "Jackson", "comment": "A bit heavy.", "rating": 4 }
+      ],
+      "specifications": {
+        "sizes": "US 8-12",
+        "material": "Leather, Rubber",
+        "features": "Waterproof, Anti-slip"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Stainless Steel Water Bottle",
+      "description": "Insulated water bottle, keeps drinks cold for 24 hours or hot for 12 hours.",
+      "price": 29.99,
+      "category": "Accessories",
+      "imageUrl": "https://images.unsplash.com/photo-1602143407151-721f548c2d52",
+      "stock": 80,
+      "rating": 4.7,
+      "reviews": [
+        { "user": "Mila", "comment": "Keeps water cold all day!", "rating": 5 },
+        { "user": "Caleb", "comment": "Lid leaks slightly.", "rating": 4 }
+      ],
+      "specifications": {
+        "capacity": "750ml",
+        "material": "Stainless Steel",
+        "features": "Double-walled, BPA-free"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Gaming Mouse",
+      "description": "Ergonomic gaming mouse with customizable buttons and RGB lighting.",
+      "price": 49.99,
+      "category": "Electronics",
+      "imageUrl": "https://images.unsplash.com/photo-1527814050087-3790b1009228",
+      "stock": 30,
+      "rating": 4.4,
+      "reviews": [
+        { "user": "Luna", "comment": "Smooth and responsive!", "rating": 5 },
+        {
+          "user": "Owen",
+          "comment": "Software is tricky to set up.",
+          "rating": 4
+        }
+      ],
+      "specifications": {
+        "DPI": "16000",
+        "buttons": "6 programmable",
+        "features": "RGB lighting, Wired"
+      }
+    },
+    {
+      "id": 14,
+      "name": "Travel Pillow",
+      "description": "Memory foam travel pillow with ergonomic design for long flights.",
+      "price": 19.99,
+      "category": "Travel",
+      "imageUrl": "https://images.unsplash.com/photo-1596399908457-87694f7013a1",
+      "stock": 50,
+      "rating": 4.2,
+      "reviews": [
+        { "user": "Aria", "comment": "So comfy for flights!", "rating": 5 },
+        { "user": "Eli", "comment": "A bit bulky to carry.", "rating": 3 }
+      ],
+      "specifications": {
+        "material": "Memory Foam",
+        "features": "Washable cover, Compact",
+        "weight": "300g"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Electric Kettle",
+      "description": "1.7L stainless steel kettle with auto shut-off and boil-dry protection.",
+      "price": 39.99,
+      "category": "Appliances",
+      "imageUrl": "https://images.unsplash.com/photo-1581705096721-c282f803b6a7",
+      "stock": 25,
+      "rating": 4.3,
+      "reviews": [
+        { "user": "Zoe", "comment": "Boils water quickly!", "rating": 5 },
+        { "user": "Leo", "comment": "Handle gets hot.", "rating": 3 }
+      ],
+      "specifications": {
+        "capacity": "1.7L",
+        "material": "Stainless Steel",
+        "features": "Auto shut-off, Boil-dry protection"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Dumbbell Set",
+      "description": "Adjustable dumbbells for home workouts, ranging from 5-25 lbs.",
+      "price": 99.99,
+      "category": "Fitness",
+      "imageUrl": "https://images.unsplash.com/photo-1596357395217-80de13130d95",
+      "stock": 10,
+      "rating": 4.8,
+      "reviews": [
+        { "user": "Lily", "comment": "Great for home gym!", "rating": 5 },
+        { "user": "Max", "comment": "Easy to adjust weights.", "rating": 4 }
+      ],
+      "specifications": {
+        "weightRange": "5-25 lbs",
+        "material": "Steel, Plastic",
+        "features": "Adjustable, Non-slip grip"
+      }
+    },
+    {
+      "id": 17,
+      "name": "Wireless Charger",
+      "description": "Fast-charging pad compatible with Qi-enabled smartphones.",
+      "price": 29.99,
+      "category": "Electronics",
+      "imageUrl": "https://images.unsplash.com/photo-1612817288484-6f916006741a",
+      "stock": 60,
+      "rating": 4.4,
+      "reviews": [
+        { "user": "Ella", "comment": "Charges my phone quickly!", "rating": 5 },
+        { "user": "Finn", "comment": "Needs precise placement.", "rating": 4 }
+      ],
+      "specifications": {
+        "output": "15W",
+        "compatibility": "Qi-enabled devices",
+        "features": "Fast charging, Non-slip"
+      }
+    },
+    {
+      "id": 18,
+      "name": "Tote Bag",
+      "description": "Canvas tote bag with leather handles and spacious interior.",
+      "price": 44.99,
+      "category": "Bags",
+      "imageUrl": "https://images.unsplash.com/photo-1584917865442-1ec22b1b80cd",
+      "stock": 40,
+      "rating": 4.5,
+      "reviews": [
+        { "user": "Grace", "comment": "Stylish and sturdy!", "rating": 5 },
+        { "user": "Henry", "comment": "Perfect for daily use.", "rating": 4 }
+      ],
+      "specifications": {
+        "material": "Canvas, Leather",
+        "dimensions": "40x30cm",
+        "features": "Inner pocket, Durable"
+      }
+    },
+    {
+      "id": 19,
+      "name": "Running Belt",
+      "description": "Water-resistant running belt with adjustable strap and zipper pocket.",
+      "price": 19.99,
+      "category": "Fitness",
+      "imageUrl": "https://images.unsplash.com/photo-1591017683133-2c0c69e3a6e2",
+      "stock": 55,
+      "rating": 4.3,
+      "reviews": [
+        { "user": "Chloe", "comment": "Holds my phone securely!", "rating": 5 },
+        { "user": "Jack", "comment": "Strap slips a bit.", "rating": 3 }
+      ],
+      "specifications": {
+        "material": "Nylon",
+        "features": "Water-resistant, Adjustable",
+        "pocket": "Zippered"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Portable Power Bank",
+      "description": "10,000mAh power bank with dual USB ports and fast charging.",
+      "price": 34.99,
+      "category": "Electronics",
+      "imageUrl": "https://images.unsplash.com/photo-1606293459209-7f7b92b58506",
+      "stock": 45,
+      "rating": 4.6,
+      "reviews": [
+        { "user": "Sofia", "comment": "Charges my devices fast!", "rating": 5 },
+        { "user": "Daniel", "comment": "A bit heavy.", "rating": 4 }
+      ],
+      "specifications": {
+        "capacity": "10,000mAh",
+        "ports": "2 USB",
+        "features": "Fast charging, LED indicator"
+      }
+    },
+    {
+      "id": 21,
+      "name": "Camping Tent",
+      "description": "2-person tent with waterproof fabric and easy setup.",
+      "price": 89.99,
+      "category": "Outdoor",
+      "imageUrl": "https://images.unsplash.com/photo-1504280390367-5f8a8d1aace6",
+      "stock": 15,
+      "rating": 4.7,
+      "reviews": [
+        { "user": "Evelyn", "comment": "Super easy to set up!", "rating": 5 },
+        { "user": "Benjamin", "comment": "Great for short trips.", "rating": 4 }
+      ],
+      "specifications": {
+        "capacity": "2-person",
+        "material": "Polyester, Aluminum",
+        "features": "Waterproof, Ventilated"
+      }
+    },
+    {
+      "id": 22,
+      "name": "Kitchen Knife Set",
+      "description": "5-piece stainless steel knife set with ergonomic handles.",
+      "price": 59.99,
+      "category": "Kitchen",
+      "imageUrl": "https://images.unsplash.com/photo-1587318945558-70e0e0f704f0",
+      "stock": 20,
+      "rating": 4.5,
+      "reviews": [
+        { "user": "Aiden", "comment": "Sharp and well-balanced!", "rating": 5 },
+        { "user": "Layla", "comment": "Handles are comfy.", "rating": 4 }
+      ],
+      "specifications": {
+        "pieces": "5",
+        "material": "Stainless Steel",
+        "features": "Ergonomic handles, Dishwasher-safe"
+      }
+    },
+    {
+      "id": 23,
+      "name": "Foldable Umbrella",
+      "description": "Compact umbrella with wind-resistant frame and automatic open/close.",
+      "price": 14.99,
+      "category": "Accessories",
+      "imageUrl": "https://images.unsplash.com/photo-1605722574840-0e6c24a9e2c1",
+      "stock": 90,
+      "rating": 4.2,
+      "reviews": [
+        { "user": "Scarlett", "comment": "Perfect for my bag!", "rating": 5 },
+        { "user": "Wyatt", "comment": "Button sticks sometimes.", "rating": 3 }
+      ],
+      "specifications": {
+        "material": "Polyester, Metal",
+        "features": "Auto open/close, Wind-resistant",
+        "size": "Compact"
+      }
+    },
+    {
+      "id": 24,
+      "name": "Bluetooth Earbuds",
+      "description": "True wireless earbuds with charging case and noise cancellation.",
+      "price": 79.99,
+      "category": "Electronics",
+      "imageUrl": "https://images.unsplash.com/photo-1590658006821-04f3d7f6a012",
+      "stock": 50,
+      "rating": 4.6,
+      "reviews": [
+        { "user": "Violet", "comment": "Sound is crystal clear!", "rating": 5 },
+        { "user": "Gabriel", "comment": "Fit could be better.", "rating": 4 }
+      ],
+      "specifications": {
+        "battery": "5 hours (20 with case)",
+        "features": "Noise cancellation, Bluetooth 5.2",
+        "weight": "45g"
+      }
+    }
+  ]
+}
