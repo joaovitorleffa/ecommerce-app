@@ -4,24 +4,24 @@ import { Product } from "../types/product";
 
 interface ProductCardProps {
   item: Product;
+  onPressProduct: (product: Product) => void;
+  onPressAddToCart: (product: Product) => void;
 }
 
-export const ProductCard = ({ item }: ProductCardProps) => {
+export const ProductCard = ({
+  item,
+  onPressAddToCart,
+  onPressProduct,
+}: ProductCardProps) => {
   return (
-    <Pressable
-      style={styles.container}
-      onPress={() => console.log(`Selected product: ${item.name}`)}
-    >
+    <Pressable style={styles.container} onPress={() => onPressProduct(item)}>
       <Image source={{ uri: item.imageUrl }} style={styles.image} />
       <View style={styles.footer}>
         <Text style={styles.title}>{item.name}</Text>
         <Text style={styles.price}>${item.price.toFixed(2)}</Text>
       </View>
 
-      <Button
-        text="Add to Cart"
-        onPress={() => console.log(`Added ${item.name} to cart`)}
-      />
+      <Button text="Add to Cart" onPress={() => onPressAddToCart(item)} />
     </Pressable>
   );
 };
