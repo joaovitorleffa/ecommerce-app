@@ -14,14 +14,22 @@ export const ProductCard = ({
   onPressProduct,
 }: ProductCardProps) => {
   return (
-    <Pressable style={styles.container} onPress={() => onPressProduct(item)}>
+    <Pressable
+      testID="product-card"
+      style={styles.container}
+      onPress={() => onPressProduct(item)}
+    >
       <Image source={{ uri: item.imageUrl }} style={styles.image} />
       <View style={styles.footer}>
         <Text style={styles.title}>{item.name}</Text>
         <Text style={styles.price}>${item.price.toFixed(2)}</Text>
       </View>
 
-      <Button text="Add to Cart" onPress={() => onPressAddToCart(item)} />
+      <Button
+        testID="add-to-cart-button"
+        text="Add to Cart"
+        onPress={() => onPressAddToCart(item)}
+      />
     </Pressable>
   );
 };
