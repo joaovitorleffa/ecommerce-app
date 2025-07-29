@@ -1,3 +1,4 @@
+import { Minus, Plus, Trash } from "lucide-react-native";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { CartItem as CartItemType } from "../types/cart";
 
@@ -41,7 +42,7 @@ export const CartItem = ({
             style={styles.quantityButton}
             onPress={handleDecreaseQuantity}
           >
-            <Text style={styles.quantityButtonText}>-</Text>
+            <Minus size={16} />
           </Pressable>
 
           <Text style={styles.quantity}>{quantity}</Text>
@@ -50,7 +51,7 @@ export const CartItem = ({
             style={styles.quantityButton}
             onPress={handleIncreaseQuantity}
           >
-            <Text style={styles.quantityButtonText}>+</Text>
+            <Plus size={16} />
           </Pressable>
         </View>
 
@@ -60,7 +61,7 @@ export const CartItem = ({
       </View>
 
       <Pressable style={styles.removeButton} onPress={handleRemove}>
-        <Text style={styles.removeButtonText}>×</Text>
+        <Trash color="#fff" size={18} strokeWidth={2} />
       </Pressable>
     </View>
   );
@@ -132,9 +133,9 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   removeButton: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
+    width: 48,
+    height: 48,
+    borderRadius: 24,
     backgroundColor: "#FF3B30",
     justifyContent: "center",
     alignItems: "center",

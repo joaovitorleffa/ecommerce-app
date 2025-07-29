@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import { useCart } from "../context/cart-context";
 import { CartItem as CartItemType } from "../types/cart";
+import { CartEmpty } from "./cart-empty";
 import { CartItem } from "./cart-item";
 
 export const CartList = () => {
@@ -38,14 +39,7 @@ export const CartList = () => {
   }, [clearCart]);
 
   if (cart.items.length === 0) {
-    return (
-      <View style={styles.emptyContainer}>
-        <Text style={styles.emptyTitle}>Your cart is empty</Text>
-        <Text style={styles.emptySubtitle}>
-          Add some products to get started!
-        </Text>
-      </View>
-    );
+    return <CartEmpty />;
   }
 
   return (
@@ -94,23 +88,6 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     paddingVertical: 8,
-  },
-  emptyContainer: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    paddingHorizontal: 32,
-  },
-  emptyTitle: {
-    fontSize: 24,
-    fontWeight: "bold",
-    color: "#333",
-    marginBottom: 8,
-  },
-  emptySubtitle: {
-    fontSize: 16,
-    color: "#666",
-    textAlign: "center",
   },
   summaryContainer: {
     backgroundColor: "#fff",

@@ -1,14 +1,14 @@
-import { AlertTriangle } from "lucide-react-native";
+import { ShoppingBag } from "lucide-react-native";
 import { StyleSheet, Text, View } from "react-native";
 
-export const MainError = () => {
+export const CartEmpty = () => {
   return (
     <View style={styles.container}>
       <View style={styles.iconContainer}>
-        <AlertTriangle size={64} color="#ff6b6b" />
+        <ShoppingBag size={64} color="#ccc" />
       </View>
-      <Text style={styles.title}>Something went wrong</Text>
-      <Text style={styles.subtitle}>Please try again later</Text>
+      <Text style={styles.title}>Your cart is empty</Text>
+      <Text style={styles.subtitle}>Add some products to get started!</Text>
     </View>
   );
 };

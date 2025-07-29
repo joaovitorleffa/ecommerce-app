@@ -1,4 +1,5 @@
 import { useCart } from "@/cart/context/cart-context";
+import { ShoppingBag } from "lucide-react-native";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
 interface CartIconProps {
@@ -11,7 +12,7 @@ export const CartIcon = ({ onPress }: CartIconProps) => {
   return (
     <Pressable style={styles.container} onPress={onPress}>
       <View style={styles.iconContainer}>
-        <Text style={styles.icon}>🛒</Text>
+        <ShoppingBag />
         {cart.totalItems > 0 && (
           <View style={styles.badge}>
             <Text style={styles.badgeText}>
