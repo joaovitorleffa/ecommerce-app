@@ -1,9 +1,9 @@
+import { MainError } from "@/errors/main";
+import type { NavigationProp } from "@/types/navigation";
+import { Spinner } from "@/ui/spinner";
 import { useNavigation } from "@react-navigation/native";
 import { useCallback } from "react";
 import { FlatList, ListRenderItem } from "react-native";
-import { MainError } from "../../../components/errors/main";
-import { Spinner } from "../../../components/ui/spinner";
-import type { NavigationProp } from "../../../types/navigation";
 import { useProducts } from "../api/get-products";
 import { Product } from "../types/product";
 import { ProductCard } from "./product-card";

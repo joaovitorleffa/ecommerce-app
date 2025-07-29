@@ -1,5 +1,5 @@
+import { Product } from "@/home/types/product";
 import { useCallback, useState } from "react";
-import { Product } from "../../home/types/product";
 import { CartItem, CartState } from "../types/cart";
 
 const initialState: CartState = {

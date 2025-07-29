@@ -1,5 +1,5 @@
+import { CartProvider } from "@/cart/context/cart-context";
 import { StyleSheet, View } from "react-native";
-import { CartProvider } from "../features/cart/context/cart-context";
 import { Router } from "./router";
 
 export default function App() {

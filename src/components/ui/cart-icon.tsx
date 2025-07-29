@@ -1,5 +1,5 @@
+import { useCart } from "@/cart/context/cart-context";
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import { useCart } from "../../features/cart/context/cart-context";
 
 interface CartIconProps {
   onPress: () => void;

@@ -1,5 +1,5 @@
+import { Product } from "@/home/types/product";
 import { StyleSheet, Text, View } from "react-native";
-import { Product } from "../../home/types/product";
 
 interface ProductSpecificationsProps {
   specifications: Product["specifications"];

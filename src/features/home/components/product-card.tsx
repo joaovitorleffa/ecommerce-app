@@ -1,5 +1,5 @@
+import { Button } from "@/ui/button";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
-import { Button } from "../../../components/ui/button";
 import { Product } from "../types/product";
 
 interface ProductCardProps {

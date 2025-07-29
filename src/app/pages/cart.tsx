@@ -1,5 +1,5 @@
+import { CartList } from "@/cart/components/cart-list";
 import { View } from "react-native";
-import { CartList } from "../../features/cart/components/cart-list";
 
 export const CartScreen = () => {
   return (

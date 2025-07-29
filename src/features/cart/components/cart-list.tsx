@@ -1,3 +1,4 @@
+import { Button } from "@/ui/button";
 import { useCallback } from "react";
 import {
   FlatList,
@@ -7,7 +8,6 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { Button } from "../../../components/ui/button";
 import { useCart } from "../context/cart-context";
 import { CartItem as CartItemType } from "../types/cart";
 import { CartItem } from "./cart-item";

@@ -1,6 +1,6 @@
+import { Product } from "@/home/types/product";
+import { api } from "@/lib/api-client";
 import { useEffect, useState } from "react";
-import { api } from "../../../lib/api-client";
-import { Product } from "../../home/types/product";
 
 export const useProduct = (productId: number) => {
   const [state, setState] = useState<{

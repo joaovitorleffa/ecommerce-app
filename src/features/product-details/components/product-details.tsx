@@ -1,11 +1,11 @@
+import { useCart } from "@/cart/context/cart-context";
+import { MainError } from "@/errors/main";
+import { RouteProp } from "@/types/navigation";
+import { Button } from "@/ui/button";
+import { Spinner } from "@/ui/spinner";
 import { useRoute } from "@react-navigation/native";
 import { useCallback } from "react";
 import { Alert, Image, ScrollView, StyleSheet, Text, View } from "react-native";
-import { MainError } from "../../../components/errors/main";
-import { Button } from "../../../components/ui/button";
-import { Spinner } from "../../../components/ui/spinner";
-import { RouteProp } from "../../../types/navigation";
-import { useCart } from "../../cart/context/cart-context";
 import { useProduct } from "../api/get-product";
 import { ProductDetailsHeader } from "./product-details-header";
 import { ProductReviews } from "./product-reviews";
