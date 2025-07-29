@@ -1,3 +1,4 @@
+import { HeaderLogo } from "@/components/ui/header-logo";
 import {
   createStaticNavigation,
   StaticParamList,
@@ -9,15 +10,16 @@ import { ProductDetailScreen } from "./pages/product-details";
 
 const RootStack = createNativeStackNavigator({
   screens: {
-    Home: HomeScreen,
+    Home: { screen: HomeScreen, options: { title: "" } },
     ProductDetails: { screen: ProductDetailScreen, options: { title: "" } },
     Cart: { screen: CartScreen, options: { title: "Cart" } },
   },
   screenOptions: {
-    headerTintColor: "#000",
+    headerTintColor: "#6200ee",
     headerStyle: {
       backgroundColor: "#fff",
     },
+    headerTitle: () => <HeaderLogo />,
   },
 });
 
