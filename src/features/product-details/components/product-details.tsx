@@ -6,6 +6,7 @@ import { Spinner } from "@/ui/spinner";
 import { useRoute } from "@react-navigation/native";
 import { useCallback } from "react";
 import { Alert, Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useProduct } from "../api/get-product";
 import { ProductDetailsHeader } from "./product-details-header";
 import { ProductReviews } from "./product-reviews";
@@ -16,6 +17,7 @@ export const ProductDetails = () => {
   const { productId } = route.params;
   const { data: product, isLoading, isError } = useProduct(productId);
   const { addToCart } = useCart();
+  const { bottom } = useSafeAreaInsets();
 
   const onPressAddToCart = useCallback(() => {
     if (product) {
@@ -40,7 +42,12 @@ export const ProductDetails = () => {
   }
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={{
+        paddingBottom: bottom,
+      }}
+    >
       <ProductDetailsHeader product={product} />
 
       <Image source={{ uri: product.imageUrl }} style={styles.image} />
@@ -82,7 +89,6 @@ const styles = StyleSheet.create({
   image: {
     width: "100%",
     height: 300,
-    // borderRadius: 12,
     marginBottom: 16,
   },
   infoSection: {

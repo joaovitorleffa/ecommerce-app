@@ -4,6 +4,7 @@ import { Spinner } from "@/ui/spinner";
 import { useNavigation } from "@react-navigation/native";
 import { useCallback } from "react";
 import { FlatList, ListRenderItem } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useProducts } from "../api/get-products";
 import { Product } from "../types/product";
 import { ProductCard } from "./product-card";
@@ -16,6 +17,7 @@ export const ProductList = ({ onAddToCart }: ProductListProps) => {
   const { data, isLoading, isError } = useProducts();
 
   const navigation = useNavigation<NavigationProp>();
+  const { bottom } = useSafeAreaInsets();
 
   const onPressProduct = useCallback(
     (product: Product) => {
@@ -54,6 +56,7 @@ export const ProductList = ({ onAddToCart }: ProductListProps) => {
         gap: 4,
         paddingTop: 16,
         paddingHorizontal: 16,
+        paddingBottom: bottom,
       }}
       columnWrapperStyle={{ gap: 4 }}
     />

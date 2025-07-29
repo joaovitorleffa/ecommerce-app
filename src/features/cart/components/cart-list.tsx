@@ -1,6 +1,7 @@
 import { Button } from "@/ui/button";
 import { useCallback } from "react";
 import { FlatList, ListRenderItem, StyleSheet, Text, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useCart } from "../context/cart-context";
 import { CartItem as CartItemType } from "../types/cart";
 import { CartEmpty } from "./cart-empty";
@@ -8,6 +9,7 @@ import { CartItem } from "./cart-item";
 
 export const CartList = () => {
   const { cart, updateQuantity, removeFromCart } = useCart();
+  const { bottom } = useSafeAreaInsets();
 
   const renderItem: ListRenderItem<CartItemType> = useCallback(
     ({ item }) => {
@@ -41,7 +43,7 @@ export const CartList = () => {
         showsVerticalScrollIndicator={false}
       />
 
-      <View style={styles.summaryContainer}>
+      <View style={[styles.summaryContainer, { paddingBottom: bottom }]}>
         <View style={styles.summaryRow}>
           <Text style={styles.summaryLabel}>Total Items:</Text>
           <Text style={styles.summaryValue}>{cart.totalItems}</Text>
