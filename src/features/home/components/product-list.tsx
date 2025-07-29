@@ -8,7 +8,11 @@ import { useProducts } from "../api/get-products";
 import { Product } from "../types/product";
 import { ProductCard } from "./product-card";
 
-export const ProductList = () => {
+interface ProductListProps {
+  onAddToCart: (product: Product) => void;
+}
+
+export const ProductList = ({ onAddToCart }: ProductListProps) => {
   const { data, isLoading, isError } = useProducts();
 
   const navigation = useNavigation<NavigationProp>();
@@ -20,19 +24,17 @@ export const ProductList = () => {
     [navigation]
   );
 
-  const onPressAddToCart = useCallback((product: Product) => {}, []);
-
   const renderItem: ListRenderItem<Product> = useCallback(
     ({ item }) => {
       return (
         <ProductCard
           item={item}
           onPressProduct={onPressProduct}
-          onPressAddToCart={onPressAddToCart}
+          onPressAddToCart={onAddToCart}
         />
       );
     },
-    [onPressAddToCart, onPressProduct]
+    [onAddToCart, onPressProduct]
   );
 
   if (isLoading) {

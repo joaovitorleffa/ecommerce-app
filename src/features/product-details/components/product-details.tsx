@@ -5,6 +5,7 @@ import { MainError } from "../../../components/errors/main";
 import { Button } from "../../../components/ui/button";
 import { Spinner } from "../../../components/ui/spinner";
 import { RouteProp } from "../../../types/navigation";
+import { useCart } from "../../cart/context/cart-context";
 import { useProduct } from "../api/get-product";
 import { ProductDetailsHeader } from "./product-details-header";
 import { ProductReviews } from "./product-reviews";
@@ -14,14 +15,21 @@ export const ProductDetails = () => {
   const route = useRoute<RouteProp<"ProductDetails">>();
   const { productId } = route.params;
   const { data: product, isLoading, isError } = useProduct(productId);
+  const { addToCart } = useCart();
 
   const onPressAddToCart = useCallback(() => {
-    Alert.alert("Success", "Product added to cart!");
-  }, []);
+    if (product) {
+      addToCart(product);
+      Alert.alert("Success", "Product added to cart!");
+    }
+  }, [product, addToCart]);
 
   const onPressBuyNow = useCallback(() => {
-    Alert.alert("Success", "Redirecting to checkout...");
-  }, []);
+    if (product) {
+      addToCart(product);
+      Alert.alert("Success", "Redirecting to checkout...");
+    }
+  }, [product, addToCart]);
 
   if (isLoading) {
     return <Spinner />;

@@ -8,6 +8,7 @@ export type RootStackParamList = {
   ProductDetails: {
     productId: number;
   };
+  Cart: undefined;
 };
 
 /**
