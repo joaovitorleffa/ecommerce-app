@@ -6,7 +6,6 @@ interface CartContextType {
   addToCart: ReturnType<typeof useCartStore>["addToCart"];
   removeFromCart: ReturnType<typeof useCartStore>["removeFromCart"];
   updateQuantity: ReturnType<typeof useCartStore>["updateQuantity"];
-  clearCart: ReturnType<typeof useCartStore>["clearCart"];
   getItemQuantity: ReturnType<typeof useCartStore>["getItemQuantity"];
 }
 

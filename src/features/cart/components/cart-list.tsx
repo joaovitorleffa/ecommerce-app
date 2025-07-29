@@ -1,20 +1,13 @@
 import { Button } from "@/ui/button";
 import { useCallback } from "react";
-import {
-  FlatList,
-  ListRenderItem,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { FlatList, ListRenderItem, StyleSheet, Text, View } from "react-native";
 import { useCart } from "../context/cart-context";
 import { CartItem as CartItemType } from "../types/cart";
 import { CartEmpty } from "./cart-empty";
 import { CartItem } from "./cart-item";
 
 export const CartList = () => {
-  const { cart, updateQuantity, removeFromCart, clearCart } = useCart();
+  const { cart, updateQuantity, removeFromCart } = useCart();
 
   const renderItem: ListRenderItem<CartItemType> = useCallback(
     ({ item }) => {
@@ -33,10 +26,6 @@ export const CartList = () => {
     // TODO: Implement checkout functionality
     console.log("Checkout pressed");
   }, []);
-
-  const handleClearCart = useCallback(() => {
-    clearCart();
-  }, [clearCart]);
 
   if (cart.items.length === 0) {
     return <CartEmpty />;
@@ -64,12 +53,6 @@ export const CartList = () => {
         </View>
 
         <View style={styles.buttonContainer}>
-          <TouchableOpacity
-            style={styles.clearButton}
-            onPress={handleClearCart}
-          >
-            <Text style={styles.clearButtonText}>Clear Cart</Text>
-          </TouchableOpacity>
           <Button
             text="Checkout"
             onPress={handleCheckout}
@@ -111,8 +94,6 @@ const styles = StyleSheet.create({
     color: "#007AFF",
   },
   buttonContainer: {
-    flexDirection: "row",
-    gap: 12,
     marginTop: 16,
   },
   clearButton: {
