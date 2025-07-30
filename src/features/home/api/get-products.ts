@@ -25,7 +25,6 @@ export const useProducts = () => {
       const data: Product[] = await response.json();
       setState({ data, isLoading: false, isError: false });
     } catch (error) {
-      console.error("Failed to fetch products:", error);
       setState({ data: [], isLoading: false, isError: true });
     }
   };
@@ -34,5 +33,5 @@ export const useProducts = () => {
     fetch();
   }, []);
 
-  return { ...state, refetch: fetch };
+  return { ...state };
 };

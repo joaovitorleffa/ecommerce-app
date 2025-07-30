@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 
 export const MainError = () => {
   return (
-    <View style={styles.container}>
+    <View testID="main-error" style={styles.container}>
       <View style={styles.iconContainer}>
         <AlertTriangle size={64} color="#ff6b6b" />
       </View>
