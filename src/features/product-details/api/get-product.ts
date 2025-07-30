@@ -25,7 +25,6 @@ export const useProduct = (productId: number) => {
       const data: Product = await response.json();
       setState({ data, isLoading: false, isError: false });
     } catch (error) {
-      console.error("Failed to fetch product:", error);
       setState({ data: null, isLoading: false, isError: true });
     }
   };
@@ -36,5 +35,5 @@ export const useProduct = (productId: number) => {
     }
   }, [productId]);
 
-  return { ...state, refetch: fetch };
+  return { ...state };
 };
