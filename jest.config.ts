@@ -21,10 +21,6 @@ const config: Config = {
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: "<rootDir>/",
   }),
-  // {
-  //   "^@/ui/(.*)$": "<rootDir>/src/components/ui/$1",
-  //   "^@/(.*)$": "<rootDir>/src/$1",
-  // },
 };
 
 export default config;
