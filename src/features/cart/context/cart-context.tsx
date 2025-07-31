@@ -1,12 +1,13 @@
 import { createContext, ReactNode, useContext } from "react";
 import { useCartStore } from "../store/cart-store";
+import { UseCartStore } from "../types/cart";
 
 interface CartContextType {
-  cart: ReturnType<typeof useCartStore>["cart"];
-  addToCart: ReturnType<typeof useCartStore>["addToCart"];
-  removeFromCart: ReturnType<typeof useCartStore>["removeFromCart"];
-  updateQuantity: ReturnType<typeof useCartStore>["updateQuantity"];
-  getItemQuantity: ReturnType<typeof useCartStore>["getItemQuantity"];
+  cart: UseCartStore["cart"];
+  addToCart: UseCartStore["addToCart"];
+  removeFromCart: UseCartStore["removeFromCart"];
+  updateQuantity: UseCartStore["updateQuantity"];
+  getItemQuantity: UseCartStore["getItemQuantity"];
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);

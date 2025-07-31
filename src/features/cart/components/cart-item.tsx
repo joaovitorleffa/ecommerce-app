@@ -28,19 +28,24 @@ export const CartItem = ({
   };
 
   return (
-    <View style={styles.container}>
-      <Image source={{ uri: product.imageUrl }} style={styles.image} />
+    <View style={styles.container} testID="cart-item-container">
+      <Image 
+        source={{ uri: product.imageUrl }} 
+        style={styles.image} 
+        testID="cart-item-image"
+      />
 
-      <View style={styles.content}>
+      <View style={styles.content} testID="cart-item-content">
         <Text style={styles.title} numberOfLines={2}>
           {product.name}
         </Text>
         <Text style={styles.price}>${product.price.toFixed(2)}</Text>
 
-        <View style={styles.quantityContainer}>
+        <View style={styles.quantityContainer} testID="quantity-container">
           <Pressable
             style={styles.quantityButton}
             onPress={handleDecreaseQuantity}
+            testID="quantity-minus-button"
           >
             <Minus size={16} />
           </Pressable>
@@ -50,6 +55,7 @@ export const CartItem = ({
           <Pressable
             style={styles.quantityButton}
             onPress={handleIncreaseQuantity}
+            testID="quantity-plus-button"
           >
             <Plus size={16} />
           </Pressable>
@@ -60,7 +66,7 @@ export const CartItem = ({
         </Text>
       </View>
 
-      <Pressable style={styles.removeButton} onPress={handleRemove}>
+      <Pressable style={styles.removeButton} onPress={handleRemove} testID="remove-button">
         <Trash color="#fff" size={18} strokeWidth={2} />
       </Pressable>
     </View>

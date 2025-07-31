@@ -1,6 +1,6 @@
 import { Product } from "@/home/types/product";
 import { useCallback, useState } from "react";
-import { CartItem, CartState } from "../types/cart";
+import { CartItem, CartState, UseCartStore } from "../types/cart";
 
 const initialState: CartState = {
   items: [],
@@ -8,7 +8,7 @@ const initialState: CartState = {
   totalPrice: 0,
 };
 
-export const useCartStore = () => {
+export const useCartStore = (): UseCartStore => {
   const [cart, setCart] = useState<CartState>(initialState);
 
   const addToCart = useCallback((product: Product) => {

@@ -10,3 +10,12 @@ export interface CartState {
   totalItems: number;
   totalPrice: number;
 }
+
+export interface UseCartStore {
+  cart: CartState;
+  addToCart: (product: Product) => void;
+  removeFromCart: (productId: number) => void;
+  updateQuantity: (productId: number, quantity: number) => void;
+  clearCart: () => void;
+  getItemQuantity: (productId: number) => number;
+}
