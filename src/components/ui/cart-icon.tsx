@@ -10,7 +10,7 @@ export const CartIcon = ({ onPress }: CartIconProps) => {
   const { cart } = useCart();
 
   return (
-    <Pressable style={styles.container} onPress={onPress}>
+    <Pressable testID="cart-icon-button" style={styles.container} onPress={onPress}>
       <View style={styles.iconContainer}>
         <ShoppingBag />
         {cart.totalItems > 0 && (
