@@ -8,6 +8,7 @@ const config: Config = {
   verbose: true,
   preset: "jest-expo",
   collectCoverage: true,
+  coverageReporters: ["html", "text"],
   collectCoverageFrom: [
     "**/*.{ts,tsx,js,jsx}",
     "!**/coverage/**",
@@ -16,6 +17,11 @@ const config: Config = {
     "!**/expo-env.d.ts",
     "!**/.expo/**",
   ],
+  coverageThreshold: {
+    global: {
+      lines: 80,
+    },
+  },
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   moduleDirectories: ["node_modules", "<rootDir>"],
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
